@@ -25,7 +25,11 @@ const config = {
             exclude: /node_module/,
             include: [path.join(__dirname, '/src/js')],
             loader: ['babel-loader']
-        }]
+        },
+		{
+          loader: ['style-loader', 'css-loader'],
+          test: /\.css$/
+      }]
     }
 }
 
